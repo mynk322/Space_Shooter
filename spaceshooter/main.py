@@ -15,18 +15,18 @@ pygame.init()
 screen = pygame.display.set_mode((800,600))
 
 #background
-background = pygame.image.load(path + 'spaceshooter/Images/background.jpg')
+background = pygame.image.load(path + 'Images/background.jpg')
 
 #Title and Icon
 pygame.display.set_caption(" Space Invader")
-icon = pygame.image.load(path + 'spaceshooter/Images/myufo.png')
+icon = pygame.image.load(path + 'Images/myufo.png')
 pygame.display.set_icon(icon)
 
 #Background Sound
-mixer.music.load(path+'spaceshooter/sounds/background.wav')
+mixer.music.load(path+'sounds/background.wav')
 mixer.music.play(-1)
 #Player
-playerImg = pygame.image.load(path+'spaceshooter/Images/spaceship.png')
+playerImg = pygame.image.load(path+'Images/spaceship.png')
 playerX = 370
 playerY = 480
 playerX_change = 0
@@ -44,17 +44,17 @@ enemyX_change =[]
 enemyY_change =[] 
 num_of_enemies = 6
 for i in range(num_of_enemies):
-    enemyImg.append(pygame.image.load(path + 'spaceshooter/Images/ghost.png'))
+    enemyImg.append(pygame.image.load(path + 'Images/ghost.png'))
     enemyX.append(random.randint(15,720))
     enemyY.append(random.randint(50,150))
     enemyX_change.append(2)
     enemyY_change.append(0)
     
 #Blast
-blastImg = pygame.image.load(path+'spaceshooter/Images/blast.png')
+blastImg = pygame.image.load(path+'Images/blast.png')
 
 #Bullet
-bulletImg = pygame.image.load(path + 'spaceshooter/Images/bullet.png')
+bulletImg = pygame.image.load(path + 'Images/bullet.png')
 bulletX = 0
 bulletY = 480
 bulletX_change = 0
@@ -128,7 +128,7 @@ while running:
             if event.key == pygame.K_SPACE:
                 if bullet_state is "ready":    
                     bulletX = playerX
-                    bullet_sound = mixer.Sound(path + 'spaceshooter/sounds/laser.wav')
+                    bullet_sound = mixer.Sound(path + 'sounds/laser.wav')
                     bullet_sound.play()
                     fire_bullet(bulletX,bulletY)
             
@@ -163,7 +163,7 @@ while running:
         collision = isCollision(enemyX[i],enemyY[i],bulletX,bulletY)
         if collision:
             bulletY=480
-            blast_sound = mixer.Sound(path + 'spaceshooter/sounds/explosion.wav')
+            blast_sound = mixer.Sound(path + 'sounds/explosion.wav')
             blast_sound.play()
             screen.blit(blastImg, (enemyX[i], enemyY[i]))
             bullet_state = "ready"
