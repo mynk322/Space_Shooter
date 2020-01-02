@@ -18,4 +18,4 @@ Press Enter to start the game.
 
 ![Screenshot 1](./spaceshooter/screenshots/1.PNG)
 
-![Screenshot 2](./spaceshooter/screenshots/2.png)
+![Screenshot 2](./spaceshooter/screenshots/2.PNG)
