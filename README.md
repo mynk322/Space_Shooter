@@ -16,6 +16,6 @@ Press Enter to start the game.
 
 # Screenshots -
 
-![Screenshot 1](./spaceshooter/screenshots/1.png)
+![Screenshot 1](./spaceshooter/screenshots/1.PNG)
 
 ![Screenshot 2](./spaceshooter/screenshots/2.png)
